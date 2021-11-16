@@ -35,7 +35,8 @@ jobs:
       - checkout
       - run:
           name: "What is your name"
-          command: echo ${my_name}
+          command: |
+            echo ${my_name}
             echo $MY_ENV_NAME
           environment:
             my_name: "Elshad"
@@ -50,3 +51,4 @@ workflows:
           requires: [print-hello]
       - print-myname:
           requires: [print-hello, print-world]
+          context: MY_ENV_VAR
