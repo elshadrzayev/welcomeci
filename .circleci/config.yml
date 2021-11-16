@@ -36,6 +36,7 @@ jobs:
       - run:
           name: "What is your name"
           command: echo ${my_name}
+            echo $MY_ENV_NAME
           environment:
             my_name: "Elshad"
 
