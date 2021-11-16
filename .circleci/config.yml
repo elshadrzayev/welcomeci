@@ -35,9 +35,9 @@ jobs:
       - checkout
       - run:
           name: "What is your name"
-          command: |
+          command: echo ${my_name}
+          environment:
             my_name: "Elshad"
-            echo $my_name
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
